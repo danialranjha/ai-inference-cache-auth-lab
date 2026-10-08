@@ -1,0 +1,7 @@
+The handle_get function in upstream_get.py is extracted from kvcache-ai/Mooncake,
+mooncake-wheel/mooncake/mooncake_store_service.py at commit
+dcddb56c0cddc96f41eeb8dd82e5bd9f497183a2, lines 731–780.
+Mooncake is distributed under Apache License 2.0 (LICENSE-APACHE).
+The method is unindented into a standalone function and supplied imports.
+Its body is unchanged. All other lab code and documentation are original.
+This experiment is independent and is not an upstream security patch.

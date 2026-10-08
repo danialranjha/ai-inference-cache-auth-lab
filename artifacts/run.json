@@ -1,0 +1,345 @@
+{
+  "aiohttp": "3.9.1",
+  "cases": 11,
+  "method_rows": 22,
+  "python": "3.11.6",
+  "rows": [
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "demo"
+        ],
+        [
+          "get",
+          "demo"
+        ]
+      ],
+      "body_hex": "494e56454e5445445f43414348455f4259544553",
+      "case": "missing_identity",
+      "content_type": "application/octet-stream",
+      "marker_returned": true,
+      "method": "original_route",
+      "status": 200
+    },
+    {
+      "backend_calls": [],
+      "body_hex": "66697874757265206964656e74697479207265717569726564",
+      "case": "missing_identity",
+      "content_type": "text/plain",
+      "marker_returned": false,
+      "method": "identity_first",
+      "status": 401
+    },
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "demo"
+        ],
+        [
+          "get",
+          "demo"
+        ]
+      ],
+      "body_hex": "494e56454e5445445f43414348455f4259544553",
+      "case": "wrong_identity",
+      "content_type": "application/octet-stream",
+      "marker_returned": true,
+      "method": "original_route",
+      "status": 200
+    },
+    {
+      "backend_calls": [],
+      "body_hex": "66697874757265206964656e74697479207265717569726564",
+      "case": "wrong_identity",
+      "content_type": "text/plain",
+      "marker_returned": false,
+      "method": "identity_first",
+      "status": 401
+    },
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "demo"
+        ],
+        [
+          "get",
+          "demo"
+        ]
+      ],
+      "body_hex": "494e56454e5445445f43414348455f4259544553",
+      "case": "valid_identity",
+      "content_type": "application/octet-stream",
+      "marker_returned": true,
+      "method": "original_route",
+      "status": 200
+    },
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "demo"
+        ],
+        [
+          "get",
+          "demo"
+        ]
+      ],
+      "body_hex": "494e56454e5445445f43414348455f4259544553",
+      "case": "valid_identity",
+      "content_type": "application/octet-stream",
+      "marker_returned": true,
+      "method": "identity_first",
+      "status": 200
+    },
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "demo"
+        ],
+        [
+          "get",
+          "demo"
+        ]
+      ],
+      "body_hex": "494e56454e5445445f43414348455f4259544553",
+      "case": "claimed_proxy_identity",
+      "content_type": "application/octet-stream",
+      "marker_returned": true,
+      "method": "original_route",
+      "status": 200
+    },
+    {
+      "backend_calls": [],
+      "body_hex": "66697874757265206964656e74697479207265717569726564",
+      "case": "claimed_proxy_identity",
+      "content_type": "text/plain",
+      "marker_returned": false,
+      "method": "identity_first",
+      "status": 401
+    },
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "absent"
+        ]
+      ],
+      "body_hex": "7b226572726f72223a20224b6579206e6f7420666f756e64227d",
+      "case": "missing_key_no_identity",
+      "content_type": "application/json",
+      "marker_returned": false,
+      "method": "original_route",
+      "status": 404
+    },
+    {
+      "backend_calls": [],
+      "body_hex": "66697874757265206964656e74697479207265717569726564",
+      "case": "missing_key_no_identity",
+      "content_type": "text/plain",
+      "marker_returned": false,
+      "method": "identity_first",
+      "status": 401
+    },
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "absent"
+        ]
+      ],
+      "body_hex": "7b226572726f72223a20224b6579206e6f7420666f756e64227d",
+      "case": "missing_key_valid_identity",
+      "content_type": "application/json",
+      "marker_returned": false,
+      "method": "original_route",
+      "status": 404
+    },
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "absent"
+        ]
+      ],
+      "body_hex": "7b226572726f72223a20224b6579206e6f7420666f756e64227d",
+      "case": "missing_key_valid_identity",
+      "content_type": "application/json",
+      "marker_returned": false,
+      "method": "identity_first",
+      "status": 404
+    },
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "empty"
+        ],
+        [
+          "get",
+          "empty"
+        ],
+        [
+          "is_exist",
+          "empty"
+        ]
+      ],
+      "body_hex": "",
+      "case": "empty_value_valid_identity",
+      "content_type": "application/octet-stream",
+      "marker_returned": false,
+      "method": "original_route",
+      "status": 200
+    },
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "empty"
+        ],
+        [
+          "get",
+          "empty"
+        ],
+        [
+          "is_exist",
+          "empty"
+        ]
+      ],
+      "body_hex": "",
+      "case": "empty_value_valid_identity",
+      "content_type": "application/octet-stream",
+      "marker_returned": false,
+      "method": "identity_first",
+      "status": 200
+    },
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "demo"
+        ]
+      ],
+      "body_hex": "7b226572726f72223a2022457869737420636865636b206661696c6564227d",
+      "case": "exist_error_no_identity",
+      "content_type": "application/json",
+      "marker_returned": false,
+      "method": "original_route",
+      "status": 500
+    },
+    {
+      "backend_calls": [],
+      "body_hex": "66697874757265206964656e74697479207265717569726564",
+      "case": "exist_error_no_identity",
+      "content_type": "text/plain",
+      "marker_returned": false,
+      "method": "identity_first",
+      "status": 401
+    },
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "demo"
+        ]
+      ],
+      "body_hex": "7b226572726f72223a2022457869737420636865636b206661696c6564227d",
+      "case": "exist_error_valid_identity",
+      "content_type": "application/json",
+      "marker_returned": false,
+      "method": "original_route",
+      "status": 500
+    },
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "demo"
+        ]
+      ],
+      "body_hex": "7b226572726f72223a2022457869737420636865636b206661696c6564227d",
+      "case": "exist_error_valid_identity",
+      "content_type": "application/json",
+      "marker_returned": false,
+      "method": "identity_first",
+      "status": 500
+    },
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "demo"
+        ],
+        [
+          "get",
+          "demo"
+        ]
+      ],
+      "body_hex": "7b226572726f72223a2022474554206f7065726174696f6e206661696c6564227d",
+      "case": "get_error_valid_identity",
+      "content_type": "application/json",
+      "marker_returned": false,
+      "method": "original_route",
+      "status": 500
+    },
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "demo"
+        ],
+        [
+          "get",
+          "demo"
+        ]
+      ],
+      "body_hex": "7b226572726f72223a2022474554206f7065726174696f6e206661696c6564227d",
+      "case": "get_error_valid_identity",
+      "content_type": "application/json",
+      "marker_returned": false,
+      "method": "identity_first",
+      "status": 500
+    },
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "other"
+        ],
+        [
+          "get",
+          "other"
+        ]
+      ],
+      "body_hex": "5345434f4e445f494e56454e5445445f56414c5545",
+      "case": "second_key_valid_identity",
+      "content_type": "application/octet-stream",
+      "marker_returned": false,
+      "method": "original_route",
+      "status": 200
+    },
+    {
+      "backend_calls": [
+        [
+          "is_exist",
+          "other"
+        ],
+        [
+          "get",
+          "other"
+        ]
+      ],
+      "body_hex": "5345434f4e445f494e56454e5445445f56414c5545",
+      "case": "second_key_valid_identity",
+      "content_type": "application/octet-stream",
+      "marker_returned": false,
+      "method": "identity_first",
+      "status": 200
+    }
+  ],
+  "scope": "fixed in-process aiohttp route tests; dictionary backend; no network/native store/model",
+  "source_excerpt_sha256": "883fa009bd3cad44acd024d3545f3980f37167f102f321843651db2c0fa5ae94"
+}

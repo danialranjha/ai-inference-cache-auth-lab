@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/kvcache-ai/Mooncake",
+  "commit": "dcddb56c0cddc96f41eeb8dd82e5bd9f497183a2",
+  "path": "mooncake-wheel/mooncake/mooncake_store_service.py",
+  "blob": "b5bc66b2de32ecf127c7c69cf82d074a6e98c098",
+  "source_bytes": 36466,
+  "method_lines": [
+    731,
+    780
+  ],
+  "modifications": "Unindented exact handle_get method into a standalone function; supplied imports. No method body changes. Native store replaced in harness; original startup and other routes not executed.",
+  "route_registration_line": 266,
+  "app_creation_line": 241,
+  "bind_line": 279
+}
